@@ -11,6 +11,7 @@
  * got yourself an install profile!
  */
 
+// Don't leave this out or you'll be sorry!
 require_once('./profiles/profiler/profiler.inc');
 
 /**
