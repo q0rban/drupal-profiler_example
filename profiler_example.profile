@@ -11,21 +11,24 @@
  * got yourself an install profile!
  */
 
-// Don't leave this out or you'll be sorry!
+// Don't leave this out or you'll be sorry! :)
 require_once('./profiles/profiler/profiler.inc');
 
 /**
- * Return a description of the profile for the initial installation screen.
+ * Return a description of the profile for the initial installation screen. 
+ * Profiler also calls this function for details about your Profiler include.
  *
  * @return
  *   An array with keys 'name' and 'description' describing this profile,
  *   and optional 'language' to override the language selection for
- *   language-specific profiles.
+ *   language-specific profiles. Profiler also looks to 'path' to discover 
+ *   the path of the Profiler include.
  */
 function profiler_example_profile_details() {
   return array(
     'name' => 'Profiler Example',
     'description' => 'An example Install profile that uses Profiler.',
+    'path' => dirname(__FILE__),
   );
 }
 

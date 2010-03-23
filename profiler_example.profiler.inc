@@ -3,11 +3,13 @@
 name = Profiler Example
 core = 6.x
 theme = chameleon
-// -----------------------------------------------------------------------------
+
 ; You could specify this as a base Profiler include by using the following in
 ; your own Install profile's Profiler include. Then everything in this file
 ; would be merged with your Profiler include.
+
 ;base = profiler_example
+
 
 ; ------------------------------
 ;           Modules
@@ -47,11 +49,13 @@ modules[contrib][] = wysiwyg
 modules[contrib][] = markdown
 modules[contrib][] = transliteration
 
+
 ; ------------------------------
 ;           Features
 ; ------------------------------
 ; Specify features thusly:
 ;features[] = example_feature
+
 
 ; ------------------------------
 ;           Roles
@@ -61,6 +65,7 @@ roles[Editor]          = 4
 roles[Publisher]       = 5
 roles[Blogger]         = 6
 roles[Registered User] = 7
+
 
 ; ------------------------------
 ;           Users
@@ -72,10 +77,11 @@ users[siteadmin][pass]     = letme1n
 users[siteadmin][roles][3] = 1
 users[siteadmin][status]   = 1
 
+
 ; ------------------------------
 ;          Input Formats
 ; ------------------------------
-; 
+
 ; Roles, in the format of [roles][] = roleid
 ; Filters, in the format of [filters][module][delta] = weight
 
@@ -121,9 +127,6 @@ input-formats[WYSIWYG][wysiwyg][settings][remove_linebreaks] = 1
 input-formats[WYSIWYG][wysiwyg][settings][apply_source_formatting] = 0
 input-formats[WYSIWYG][wysiwyg][settings][paste_auto_cleanup_on_paste] = 0
 input-formats[WYSIWYG][wysiwyg][settings][block_formats] = p,h2,h3,h4,h5,blockquote
-input-formats[WYSIWYG][wysiwyg][settings][css_setting] = self
-input-formats[WYSIWYG][wysiwyg][settings][css_path] = sites/all/themes/webgear/cog/styles/tinymce.css
-input-formats[WYSIWYG][wysiwyg][settings][css_classes] = "Highlight=highlight
 Image with Border=border
 Float Left=left
 Float Right=right
@@ -138,98 +141,15 @@ input-formats[Markdown][filters][filter][2] = -9
 input-formats[Markdown][filters][filter][3] = -6
 input-formats[Markdown][allowed-html] = "<a> <p> <em> <strong> <span> <h1> <h2> <h3> <h4> <h5> <blockquote> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <img> <table> <thead> <tbody> <tfoot> <th> <tr> <td>"
 
+
 ; ------------------------------
 ;          Variables
 ; ------------------------------
-variables[captcha_administration_mode] = 0
-variables[custom_teasers_nodereference_types][] = blog
-variables[custom_teasers_nodereference_types][] = event
-variables[custom_teasers_nodereference_types][] = page
-variables[pngfix_css_classes] = #header, #content
-variables[site_footer] = 1.800.123.4567
+variables[site_name] = Profiler Example
+variables[site_footer] = Profiler Example
 variables[site_frontpage] = node/1
-variables[highslide_formatters][sidebar][name] = sidebar
-variables[highslide_formatters][sidebar][label] = Highslide - Sidebar
-variables[highslide_formatters][sidebar][thumb][formatter] = sidebar_default
-variables[highslide_formatters][sidebar][thumb][theme] = imagecache_formatter_sidebar_default
-variables[highslide_formatters][sidebar][full][formatter] = highslide_full_path
-variables[highslide_formatters][sidebar][full][theme] = imagecache_formatter_highslide_full_path
-variables[highslide_formatters][sidebar][caption] = full
-variables[highslide_formatters][sidebar][caption_field] = default
-variables[highslide_formatters][sidebar_short][name] = sidebar_short
-variables[highslide_formatters][sidebar_short][label] = Highslide - Sidebar Short
-variables[highslide_formatters][sidebar_short][thumb][formatter] = sidebar_short_default
-variables[highslide_formatters][sidebar_short][thumb][theme] = imagecache_formatter_sidebar_short_default
-variables[highslide_formatters][sidebar_short][full][formatter] = highslide_full_path
-variables[highslide_formatters][sidebar_short][full][theme] = imagecache_formatter_highslide_full_path
-variables[highslide_formatters][sidebar_short][caption] = full
-variables[highslide_formatters][sidebar_short][caption_field] = default
-variables[highslide_formatters][sidebar_square][name] = sidebar_square
-variables[highslide_formatters][sidebar_square][label] = Highslide - Sidebar Square
-variables[highslide_formatters][sidebar_square][thumb][formatter] = sidebar_square_default
-variables[highslide_formatters][sidebar_square][thumb][theme] = imagecache_formatter_sidebar_square_default
-variables[highslide_formatters][sidebar_square][full][formatter] = highslide_full_path
-variables[highslide_formatters][sidebar_square][full][theme] = imagecache_formatter_highslide_full_path
-variables[highslide_formatters][sidebar_square][caption] = full
-variables[highslide_formatters][sidebar_square][caption_field] = default
-variables[highslide_formatters][sidebar_tall][name] = sidebar_tall
-variables[highslide_formatters][sidebar_tall][label] = Highslide - Sidebar Tall
-variables[highslide_formatters][sidebar_tall][thumb][formatter] = sidebar_tall_default
-variables[highslide_formatters][sidebar_tall][thumb][theme] = imagecache_formatter_sidebar_tall_default
-variables[highslide_formatters][sidebar_tall][full][formatter] = highslide_full_path
-variables[highslide_formatters][sidebar_tall][full][theme] = imagecache_formatter_highslide_full_path
-variables[highslide_formatters][sidebar_tall][caption] = full
-variables[highslide_formatters][sidebar_tall][caption_field] = default
-variables[highslide_formatters][content_short][name] = content_short
-variables[highslide_formatters][content_short][label] = Highslide - Content Short
-variables[highslide_formatters][content_short][thumb][formatter] = content_short_default
-variables[highslide_formatters][content_short][thumb][theme] = imagecache_formatter_content_short_default
-variables[highslide_formatters][content_short][full][formatter] = highslide_full_path
-variables[highslide_formatters][content_short][full][theme] = imagecache_formatter_highslide_full_path
-variables[highslide_formatters][content_short][caption] = full
-variables[highslide_formatters][content_short][caption_field] = default
-variables[highslide_formatters][content_short_wide][name] = content_short_wide
-variables[highslide_formatters][content_short_wide][label] = Highslide - Content Short Wide
-variables[highslide_formatters][content_short_wide][thumb][formatter] = content_short_wide_default
-variables[highslide_formatters][content_short_wide][thumb][theme] = imagecache_formatter_content_short_wide_default
-variables[highslide_formatters][content_short_wide][full][formatter] = highslide_full_path
-variables[highslide_formatters][content_short_wide][full][theme] = imagecache_formatter_highslide_full_path
-variables[highslide_formatters][content_short_wide][caption] = full
-variables[highslide_formatters][content_short_wide][caption_field] = default
-variables[highslide_formatters][content_square][name] = content_square
-variables[highslide_formatters][content_square][label] = Highslide - Content Square
-variables[highslide_formatters][content_square][thumb][formatter] = content_square_default
-variables[highslide_formatters][content_square][thumb][theme] = imagecache_formatter_content_square_default
-variables[highslide_formatters][content_square][full][formatter] = highslide_full_path
-variables[highslide_formatters][content_square][full][theme] = imagecache_formatter_highslide_full_path
-variables[highslide_formatters][content_square][caption] = full
-variables[highslide_formatters][content_square][caption_field] = default
-variables[highslide_formatters][content_square_wide][name] = content_square_wide
-variables[highslide_formatters][content_square_wide][label] = Highslide - Content Square Wide
-variables[highslide_formatters][content_square_wide][thumb][formatter] = content_square_wide_default
-variables[highslide_formatters][content_square_wide][thumb][theme] = imagecache_formatter_content_square_wide_default
-variables[highslide_formatters][content_square_wide][full][formatter] = highslide_full_path
-variables[highslide_formatters][content_square_wide][full][theme] = imagecache_formatter_highslide_full_path
-variables[highslide_formatters][content_square_wide][caption] = full
-variables[highslide_formatters][content_square_wide][caption_field] = default
-variables[highslide_formatters][content_tall][name] = content_tall
-variables[highslide_formatters][content_tall][label] = Highslide - Content Tall
-variables[highslide_formatters][content_tall][thumb][formatter] = content_tall_default
-variables[highslide_formatters][content_tall][thumb][theme] = imagecache_formatter_content_tall_default
-variables[highslide_formatters][content_tall][full][formatter] = highslide_full_path
-variables[highslide_formatters][content_tall][full][theme] = imagecache_formatter_highslide_full_path
-variables[highslide_formatters][content_tall][caption] = full
-variables[highslide_formatters][content_tall][caption_field] = default
-variables[highslide_formatters][content_tall_wide][name] = content_tall_wide
-variables[highslide_formatters][content_tall_wide][label] = Highslide - Content Tall Wide
-variables[highslide_formatters][content_tall_wide][thumb][formatter] = content_tall_wide_default
-variables[highslide_formatters][content_tall_wide][thumb][theme] = imagecache_formatter_content_tall_wide_default
-variables[highslide_formatters][content_tall_wide][full][formatter] = highslide_full_path
-variables[highslide_formatters][content_tall_wide][full][theme] = imagecache_formatter_highslide_full_path
-variables[highslide_formatters][content_tall_wide][caption] = full
-variables[highslide_formatters][content_tall_wide][caption_field] = default
 variables[theme_settings][toggle_node_info_page] = 0
-variables[theme_settings][toggle_node_info_teaser] = 0
+
 
 ; ------------------------------
 ;          Permissions
@@ -290,6 +210,7 @@ permissions[show format selection] = anonymous user,authenticated user
 permissions[skip CAPTCHA] = authenticated user,Admin,Editor,Publisher,Blogger
 permissions[view highslides] = anonymous user,authenticated user
 
+
 ; ------------------------------
 ;          Nodes types
 ; ------------------------------
@@ -305,13 +226,15 @@ node-types[page][locked] = 0
 node-types[page][help] = ''
 node-types[page][min_word_count] = ''
 
+
 ; ------------------------------
 ;             Nodes
 ; ------------------------------
 nodes[front][type] = page
 nodes[front][title] = Isn't Profiler nifty?
 nodes[front][uid] = 2
-nodes[front][body] = 
+nodes[front][body] = <p>Donec vel ipsum elit. In rutrum, ante at fringilla pharetra, mi justo fermentum risus; eget commodo est mi lobortis augue. Proin fringilla malesuada semper. Ut velit sapien, condimentum vel faucibus ut, aliquam quis dui? Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus vulputate fringilla enim, non convallis nibh lacinia at. Etiam fermentum, lectus ac sagittis volutpat, est augue tincidunt mi, et consectetur orci nisi sit amet sapien. Ut nisi nunc, molestie quis sollicitudin at, dignissim eget nisl? Sed vitae sem lectus. Curabitur viverra laoreet magna. Sed eget sapien tellus, eu tempor purus. Proin dignissim, lacus vitae venenatis porttitor, justo libero rhoncus felis, nec dictum nisl mi vitae nisi. Maecenas tincidunt eros at turpis sollicitudin nec viverra enim condimentum. Sed nec enim justo. In tristique risus dui; ac egestas mi. Proin at arcu sed enim eleifend ornare eu at arcu. Curabitur ullamcorper, ipsum eu imperdiet pharetra, mauris lorem hendrerit metus, in consectetur mauris est iaculis eros. Quisque euismod hendrerit metus ullamcorper tempus! Cras gravida ornare arcu vitae commodo. In hac habitasse platea turpis duis.</p>
+
 
 ; ------------------------------
 ;             Menus
@@ -335,3 +258,11 @@ menu-items[front][link_path]  = <front>
 menu-items[front][link_title] = Home
 menu-items[front][weight]     = -10
 menu-items[front][menu_name]  = primary-links
+
+
+; ------------------------------
+;            Blocks
+; ------------------------------
+blocks[menu-menu-footer-links][module] = menu
+blocks[menu-menu-footer-links][delta] = menu-footer-links
+blocks[menu-menu-footer-links][region] = right
