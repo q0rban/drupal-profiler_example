@@ -85,12 +85,17 @@ roles[publisher][name] = Publisher
 ; ------------------------------
 ;           Users
 ; ------------------------------
-users[siteadmin][uid]      = 2
-users[siteadmin][name]     = siteadmin
-users[siteadmin][mail]     = changeme@email.com
-users[siteadmin][pass]     = letme1n
-users[siteadmin][roles][3] = 1
-users[siteadmin][status]   = 1
+
+; Keep in mind when adding users like this that you are proceeding at your own
+; risk. You are writing in plain text certain data that could compromise your 
+; site. The password field you specify for any user should be an md5 hashed 
+; password.
+users[siteadmin][uid]    = 2
+users[siteadmin][name]   = siteadmin
+users[siteadmin][mail]   = changeme@email.com
+users[siteadmin][pass]   = 10aa208e7e9e257a3f4fe66d1acf84e8
+users[siteadmin][roles]  = Admin,Publisher
+users[siteadmin][status] = 1
 
 
 ; ------------------------------
@@ -100,10 +105,7 @@ users[siteadmin][status]   = 1
 ; Roles, in the format of [roles][] = roleid
 ; Filters, in the format of [filters][module][delta] = weight
 
-input-formats[WYSIWYG][roles][] = 3
-input-formats[WYSIWYG][roles][] = 4
-input-formats[WYSIWYG][roles][] = 5
-input-formats[WYSIWYG][roles][] = 6
+input-formats[WYSIWYG][roles] = Admin,Publisher
 input-formats[WYSIWYG][filters][filter][0] = -8
 input-formats[WYSIWYG][filters][filter][1] = -7
 input-formats[WYSIWYG][filters][filter][2] = -9
@@ -148,7 +150,7 @@ Float Right=right
 Hide=hide"
 
 input-formats[Markdown][default] = 1
-input-formats[Markdown][roles][] = 2
+input-formats[Markdown][roles] = anonymous user,authenticated user
 input-formats[Markdown][filters][markdown][0] = -10
 input-formats[Markdown][filters][filter][0] = -7
 input-formats[Markdown][filters][filter][1] = -8
@@ -169,61 +171,22 @@ variables[theme_settings][toggle_node_info_page] = 0
 ; ------------------------------
 ;          Permissions
 ; ------------------------------
-permissions[access administration pages] = Admin,Editor,Publisher,Blogger
+permissions[access administration pages] = Admin,Publisher
 permissions[access content] = anonymous user,authenticated user
-permissions[access dashboard] = Admin,Editor,Publisher,Blogger
-permissions[access news feeds] = Admin,Editor,Publisher,Blogger
-permissions[access private content] = Admin,Editor,Publisher,Blogger,Registered User
 permissions[access user profiles] = Admin
-permissions[access webgear menu] = Admin,Editor,Publisher,Blogger
-permissions[administer google analytics] = Admin
 permissions[administer menu] = Admin,Publisher
-permissions[administer nodes] = Admin,Editor,Publisher,Blogger
+permissions[administer nodes] = Admin,Publisher
 permissions[administer site configuration] = Admin
 permissions[administer users] = Admin
-permissions[administer webgear] = Admin,Editor,Publisher,Blogger
-permissions[assign Admin role] = Admin
-permissions[assign Blogger role] = Admin
-permissions[assign Editor role] = Admin
-permissions[assign Publisher role] = Admin
-permissions[assign Registered User role] = Admin
 permissions[change own username] = authenticated user
-permissions[collapse format fieldset by default] = anonymous user,authenticated user
-permissions[collapsible format selection] = anonymous user,authenticated user
-permissions[create custom teasers] = Admin,Editor,Publisher
 permissions[create page content] = Admin,Publisher
 permissions[create users] = Admin
 permissions[delete any page content] = Admin,Publisher
-permissions[delete own custom teasers] = Admin,Editor,Publisher
-permissions[delete own page content] = Admin,Editor,Publisher
-permissions[delete users with role Admin] = Admin
-permissions[delete users with role Blogger] = Admin
-permissions[delete users with role Editor] = Admin
-permissions[delete users with role Publisher] = Admin
-permissions[delete users with role Registered User] = Admin
-permissions[edit any custom teasers] = Admin,Editor,Publisher
-permissions[edit any page content] = Admin,Editor,Publisher
-permissions[edit any plug content] = Editor
-permissions[edit own custom teasers] = Admin,Editor,Publisher
-permissions[edit own page content] = Admin,Editor,Publisher
-permissions[edit private content] = Admin,Editor,Publisher
-permissions[edit users with role Admin] = Admin
-permissions[edit users with role Blogger] = Admin
-permissions[edit users with role Editor] = Admin
-permissions[edit users with role Publisher] = Admin
-permissions[edit users with role Registered User] = Admin
-permissions[delete users with role Blogger] = Admin
-permissions[delete users with role Editor] = Admin
-permissions[delete users with role Publisher] = Admin
-permissions[delete users with role Registered User] = Admin
+permissions[delete own page content] = Admin,Publisher
+permissions[edit any page content] = Admin,Publisher
 permissions[flush imagecache] = Admin
-permissions[manage regions] = Admin,Editor,Publisher,Blogger
-permissions[mark content as private] = Admin,Editor,Publisher
-permissions[notify of path changes] = Admin,Editor,Publisher,Blogger
+permissions[notify of path changes] = Admin,Publisher
 permissions[search content] = anonymous user
-permissions[show format selection] = anonymous user,authenticated user
-permissions[skip CAPTCHA] = authenticated user,Admin,Editor,Publisher,Blogger
-permissions[view highslides] = anonymous user,authenticated user
 
 
 ; ------------------------------
