@@ -72,3 +72,13 @@ function profiler_example_profile_task_list() {
 function profiler_example_profile_tasks(&$task, $url) {
   profiler_profile_tasks($task, $url, 'profiler_example');
 }
+
+/**
+ * Implementation of hook_form_alter().
+ *
+ * Allows the profile to alter the site-configuration form. This is
+ * called through custom invocation, so $form_state is not populated.
+ */
+function isis_profile_form_alter(&$form, $form_state, $form_id) {
+  profiler_form_alter('profiler_example', $form, $form_state, $form_id);
+}

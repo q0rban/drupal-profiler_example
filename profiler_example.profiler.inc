@@ -131,12 +131,11 @@ roles[publisher][name] = Publisher
 ; site. The password field you specify for any user should be an md5 hashed 
 ; password. I guess that gives you at least one measure of security.
 ;
-; One other thing to note here, is that you can actually specify set up 
-; credentials for user 1, or Drupal's Super user. Not really something I'd 
-; recommend. If you do happen to specify user 1 below, like I've done here,
-; you'll notice that the install profile skips the screen where you would 
-; normally set that up, which I happen to think is pretty handy. Well, of 
-; course I do, or I wouldn't have written it that way, right? ;)
+; One other thing to note here is that there's this (handy) quirk in Drupal's 
+; install API in that you can bypass the configuration form during installation
+; (where you'd normally set up user 1 credentials and the site name and such).
+; To do this you need to specify credentials for user 1 and also specify the
+; site name and site email variables (@see Variables below). 
 ; -----------------------------------------------------------------------------
 
 users[superduper][uid]    = 1
@@ -235,7 +234,17 @@ Float Right=right"
 ; -----------------------------------------------------------------------------
 ;                                  Variables
 ; -----------------------------------------------------------------------------
+; These variables should be pretty self explanatory, as they are just an array
+; of key value pairs for items in the variable table. Nested arrays also can 
+; crop up here, since variables can be arrays.
+;
+; Also, make note of the site_name and site_mail variables below. These 
+; variables need to be set if you want to bypass the Configuration form during 
+; installation (@see Users for more information on how this is accomplished).
+; -----------------------------------------------------------------------------
 variables[site_name] = Profiler Example
+variables[site_mail] = testing@testing
+
 variables[site_footer] = Profiler Example
 variables[site_frontpage] = node/1
 variables[theme_settings][toggle_node_info_page] = 0
