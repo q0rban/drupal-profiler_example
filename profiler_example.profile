@@ -2,8 +2,8 @@
 // $Id$
 
 /**
- // -----------------------------------------------------------------------------
  * @file
+ *
  * An example Install profile that uses Profiler. To create your own Install 
  * profile, copy the directory that this file resides in, and rename all files 
  * and directories, replacing profiler_example with the machine name of your 
@@ -47,7 +47,6 @@ function profiler_example_profile_modules() {
 /**
  * Return a list of tasks that this profile supports.
  *
- // -----------------------------------------------------------------------------
  * @return
  *   A keyed array of tasks the profile will perform during the final stage. The 
  *   keys of the array will be used internally, while the values will be 
