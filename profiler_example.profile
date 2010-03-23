@@ -79,6 +79,6 @@ function profiler_example_profile_tasks(&$task, $url) {
  * Allows the profile to alter the site-configuration form. This is
  * called through custom invocation, so $form_state is not populated.
  */
-function isis_profile_form_alter(&$form, $form_state, $form_id) {
+function profiler_example_form_alter(&$form, $form_state, $form_id) {
   profiler_form_alter('profiler_example', $form, $form_state, $form_id);
 }
