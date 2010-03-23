@@ -60,11 +60,26 @@ modules[contrib][] = transliteration
 ; ------------------------------
 ;           Roles
 ; ------------------------------
-roles[Admin]           = 3
-roles[Editor]          = 4
-roles[Publisher]       = 5
-roles[Blogger]         = 6
-roles[Registered User] = 7
+
+; Roles are kinda tricky, because the role ids are what makes them work, yet 
+; role ids are given in the order in which the roles are created. For this 
+; reason there are two ways of specifying roles here. You can either just make 
+; an array of roles with the values being the name of the role, or you can make 
+; the value be a nested array and specify the role id manually. Take care when 
+; using this latter method. Role id's 1 and 2 are reserved in Drupal.
+
+; Note how a text key ('admin' & 'publisher') is used in both instances. This 
+; isn't strictly necessary, as you could just empty brackets (roles[] = Admin),
+; however if you create a Sub-Profiler include based off this include, you 
+; wouldn't have a way of overriding these values if you needed to. Best to use 
+; text keys just in case.
+
+; ------- Method 1 --------
+roles[admin] = Admin
+
+; ------- Method 2 --------
+roles[publisher][rid] = 4
+roles[publisher][name] = Publisher
 
 
 ; ------------------------------
