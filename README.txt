@@ -1,4 +1,4 @@
-# $Id$
+# $Id: README.txt,v 1.1 2010/03/24 00:39:09 q0rban Exp $
 
 Profiler Example is an example Install Profile for use with Profiler. To create 
 your own Install profile, copy the directory that this file resides in, and 

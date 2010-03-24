@@ -1,5 +1,5 @@
 <?php
-// $Id$
+// $Id: profiler_example.profile,v 1.1 2010/03/24 00:39:09 q0rban Exp $
 
 /**
  * @file
