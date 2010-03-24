@@ -1,28 +1,23 @@
 core = 6.16
 
 ; Profiles
-projects[profiler][version] = "1.0"
+projects[profiler] = 1.0
 
 ; Modules
-projects[admin_menu][version] = "1.5"
-projects[advanced_help][version] = "1.2"
-projects[cck][version] = "2.6"
-projects[date][version] = "2.4"
-projects[features][version] = "1.0-beta6"
-projects[filefield][version] = "3.2"
-projects[globalredirect][version] = "1.2"
-projects[imageapi][version] = "1.6"
-projects[imagecache][version] = "2.0-beta10"
-projects[imagefield][version] = "3.2"
-projects[install_profile_api][version] = "2.1"
-projects[markdown][version] = "1.1"
-projects[pathauto][version] = "1.3"
-projects[token][version] = "1.12"
-projects[transliteration][version] = "2.1"
-projects[views][version] = "2.8"
-projects[wysiwyg][version] = "2.1"
-
-; Libraries
-;libraries[tinymce][download][type] = "get"
-;libraries[tinymce][download][url] = "http://downloads.sourceforge.net/project/tinymce/TinyMCE/3.2.7/tinymce_3_2_7.zip"
-;libraries[tinymce][directory_name] = "tinymce"
+projects[admin_menu] = 1.5
+projects[advanced_help] = 1.2
+projects[cck] = 2.6
+projects[date] = 2.4
+projects[features] = 1.0-beta6
+projects[filefield] = 3.2
+projects[globalredirect] = 1.2
+projects[imageapi] = 1.6
+projects[imagecache] = 2.0-beta10
+projects[imagefield] = 3.2
+projects[install_profile_api] = 2.1
+projects[markdown] = 1.1
+projects[pathauto] = 1.3
+projects[token] = 1.12
+projects[transliteration] = 2.1
+projects[views] = 2.8
+projects[wysiwyg] = 2.1
